@@ -24,4 +24,6 @@ runs:
       shell: bash
 
 outputs:
-  simulatorid: ${{ steps.mainstep.outputs.simulatorid }}
+  simulatorid:
+    description: 'The matching simulator id'
+    value: ${{ steps.mainstep.outputs.simulatorid }}
