@@ -22,5 +22,5 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "::set-output name=simulator-id::$($GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}')"
+    - run: echo "simulator-id=$($GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}')" >> $GITHUB_OUTPUT
       shell: bash
