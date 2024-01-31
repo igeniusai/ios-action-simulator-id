@@ -16,11 +16,11 @@ inputs:
     default: '17.0'
 
 outputs:
-  simulator-id:
+  simulatorid:
     description: 'The matching simulator id'
 
 runs:
   using: "composite"
   steps:
-    - run: echo "simulator-id=$($GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}')" >> $GITHUB_OUTPUT
+    - run: echo "simulatorid=$($GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}')" >> $GITHUB_OUTPUT
       shell: bash
