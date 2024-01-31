@@ -17,9 +17,9 @@ inputs:
 
 runs:
   using: "composite"
-  id: mainstep
   steps:
-    - run: $GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}'
+    - id: mainstep
+      run: $GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}'
       shell: bash
 
 outputs:
