@@ -22,5 +22,5 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "simulatorid=$($GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}')" >> $GITHUB_OUTPUT
+    - run: $GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}'
       shell: bash

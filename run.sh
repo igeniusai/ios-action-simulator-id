@@ -25,4 +25,6 @@ then
       exit 1
 fi
 
-echo $SIMULATOR_ID
+echo "simulator id found: '$SIMULATOR_ID'"
+
+echo "simulatorid=$SIMULATOR_ID" >> $GITHUB_OUTPUT
