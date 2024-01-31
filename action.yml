@@ -13,7 +13,7 @@ inputs:
   os:
     description: 'Device os version'
     required: true
-    default: 'latest'
+    default: '17.0'
 
 outputs:
   simulator-id:
@@ -25,4 +25,3 @@ runs:
     - run: |
       simulator_id=$($GITHUB_ACTION_PATH/run.sh "${{ inputs.device }}" "${{ inputs.os }}")
       echo "::set-output name=simulator-id::$simulator_id"
-    shell: bash
