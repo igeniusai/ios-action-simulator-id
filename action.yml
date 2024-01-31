@@ -25,4 +25,3 @@ runs:
 
 outputs:
   simulatorid: ${{ steps.mainstep.outputs.simulatorid }}
-    description: 'The matching simulator id'
