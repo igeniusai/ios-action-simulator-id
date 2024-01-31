@@ -18,7 +18,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - id: mainstep
+    - name: Get device simulator id
+      id: mainstep
       run: $GITHUB_ACTION_PATH/run.sh '${{ inputs.device }}' '${{ inputs.os }}'
       shell: bash
 
