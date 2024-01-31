@@ -1,0 +1,28 @@
+name: 'Simulator id finder'
+description: 'Action to get the first matching device id based on the specified device model and ios version available in the current macos'
+
+branding:
+  icon: "tablet"
+  color: "blue"
+
+inputs:
+  device:
+    description: 'Device model'
+    required: true
+    default: 'iPhone'
+  os:
+    description: 'Device os version'
+    required: true
+    default: 'latest'
+
+outputs:
+  simulator-id:
+    description: 'The matching simulator id'
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+      simulator_id=$($GITHUB_ACTION_PATH/run.sh "${{ inputs.device }}" "${{ inputs.os }}")
+      echo "::set-output name=simulator-id::$simulator_id"
+    shell: bash
